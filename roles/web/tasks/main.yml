@@ -1,0 +1,13 @@
+- name: Install Nginx + PHP
+  apt:
+    name:
+      - nginx
+      - php-fpm
+      - php-mysql
+    state: present
+
+- name: Start nginx
+  service:
+    name: nginx
+    state: started
+    enabled: yes
